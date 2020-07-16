@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
 
+/*Colors*/
 $background-color: #d8eacb;
+$background-color-header: #eeeeee;
+$background-color-nav: #72a84a;
+$black-color: #000000;
+$white-color: #ffffff;
+
+/*Typography*/
+$montserrat-typography: 'Montserrat', sans-serif;
+
+/*Images*/
+$background-img-forest: '../images/forest.jpg';
 
 html,
 body {
@@ -10,4 +21,113 @@ body {
 
 body {
   background-color: $background-color;
+  font-family: $montserrat-typography;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $background-color-header;
+  padding: 0.5em;
+}
+
+.logo {
+  color: $black-color;
+  font-weight: bold;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+nav {
+  ul {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: $background-color-nav;
+    padding-top: 5em;
+    z-index: 100;
+
+    li {
+      a {
+        color: $black-color;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1em;
+        display: block;
+      }
+    }
+  }
+}
+
+.exit {
+  a {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.open-nav {
+  visibility: unset;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.forest-hero {
+  background: url($background-img-forest);
+  background-size: cover;
+  color: $white-color;
+}
+
+.wrapper {
+  padding: 0.5em;
+  text-align: center;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.subtitle {
+  padding: 3em 0 0.5em;
+}
+
+h1 {
+  span {
+    display: block;
+    // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+}
+
+.cta {
+  padding: 1em;
+  background-color: $background-color-nav;
+  font-weight: bold;
+  color: $white-color;
+  // display: inline-block allows to set margin of this element
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-top: 1em;
 }
