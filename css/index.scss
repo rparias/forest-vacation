@@ -6,6 +6,7 @@ $background-color-header: #eeeeee;
 $background-color-nav: #72a84a;
 $black-color: #000000;
 $white-color: #ffffff;
+$gray-color: #cccccc;
 
 /*Typography*/
 $montserrat-typography: 'Montserrat', sans-serif;
@@ -191,5 +192,25 @@ ul.features li p,
 
   img {
     width: 10px;
+  }
+}
+
+.feature-container {
+  background-color: $black-color;
+  color: white;
+}
+
+ul.features {
+  margin: 3em auto;
+  width: 70%;
+
+  li {
+    img {
+      width: 20%;
+    }
+
+    p {
+      color: $gray-color;
+    }
   }
 }
