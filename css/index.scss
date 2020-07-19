@@ -15,6 +15,11 @@ $playfair-typography: 'Playfair Display', serif;
 /*Images*/
 $background-img-forest: '../images/forest.jpg';
 
+/*Screen sizes*/
+$sm-tablet-screen: 550px;
+$tablet-screen: 762px;
+$desktop-screen: 1024px;
+
 html,
 body {
   margin: 0;
@@ -265,4 +270,88 @@ ul.testimonials {
   width: 80%;
   z-index: 1;
   opacity: 0.1;
+}
+
+@media (min-width: $sm-tablet-screen) {
+  header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu,
+  .exit {
+    display: none;
+  }
+  ul.nav {
+    visibility: unset;
+    opacity: 1;
+    background-color: unset;
+    position: unset;
+    height: auto;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      a {
+        font-size: 0.9em;
+        font-weight: normal;
+        padding: 0 1em;
+      }
+
+      &:last-child a {
+        padding-right: 0;
+      }
+
+      &.active a {
+        font-weight: bold;
+        color: $background-color-nav;
+      }
+    }
+  }
+
+  p.subtitle {
+    font-size: 1.2em;
+  }
+
+  ul.featured-cabins {
+    width: 80%;
+  }
+
+  .cabin-title {
+    &:after {
+      width: 40%;
+      height: 0.3em;
+      background-color: $background-color-nav;
+      bottom: -10px;
+      left: 120px;
+    }
+  }
+}
+
+@media (min-width: $tablet-screen) {
+  ul.featured-cabins {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 3em;
+  }
+
+  .cabin-title {
+    &:after {
+      width: 100%;
+      height: 0.3em;
+      background-color: $background-color-nav;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+
+  .cabin-img {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .last-container .flex {
+    margin: 0 auto;
+    width: 80%;
+  }
 }
