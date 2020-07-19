@@ -228,3 +228,41 @@ ul.features {
   font-size: 1.1em;
   margin-bottom: 3em;
 }
+
+ul.testimonials {
+  margin: 3em 0;
+  li {
+    margin-bottom: 3em;
+    img {
+      border-radius: 50%;
+      width: 20%;
+      height: 20%;
+      box-shadow: 5px 5px 5px rgba(114, 168, 74, 0.3);
+    }
+  }
+}
+
+.test-left {
+  .test-desc {
+    font-family: $playfair-typography;
+    font-style: italic;
+  }
+
+  .test-auth {
+    font-weight: bold;
+    font-size: 0.85em;
+  }
+}
+
+.last-container {
+  position: relative;
+}
+
+.fern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  z-index: 1;
+  opacity: 0.1;
+}
