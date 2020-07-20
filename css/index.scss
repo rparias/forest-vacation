@@ -17,8 +17,8 @@ $background-img-forest: '../images/forest.jpg';
 
 /*Screen sizes*/
 $sm-tablet-screen: 550px;
-$tablet-screen: 762px;
-$desktop-screen: 1024px;
+$tablet-screen: 750px;
+$desktop-screen: 980px;
 
 html,
 body {
@@ -311,7 +311,7 @@ ul.testimonials {
   }
 
   p.subtitle {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   ul.featured-cabins {
@@ -353,5 +353,49 @@ ul.testimonials {
   .last-container .flex {
     margin: 0 auto;
     width: 80%;
+  }
+
+  ul.features {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 3em;
+  }
+}
+
+@media (min-width: $desktop-screen) {
+  .wrapper {
+    text-align: left;
+  }
+
+  .hero {
+    padding: 8em 4em;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .last-container {
+    padding: 0 4em;
+  }
+
+  .main-copy {
+    width: 40%;
+  }
+
+  p.subtitle {
+    font-size: 1em;
+    margin: 0 0 1em;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-top: 0;
+  }
+
+  ul.featured-cabins {
+    width: 70%;
   }
 }
